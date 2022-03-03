@@ -120,7 +120,4 @@
     <Compile Remove="**\Windows\**\*.cs" />
     <None Include="**\Windows\**\*.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Remove="bin\"/>
-  </ItemGroup>
 </Project>
