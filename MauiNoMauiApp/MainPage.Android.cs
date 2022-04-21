@@ -1,7 +1,7 @@
 ﻿using Android.Content;
 using Android.Views;
 using Android.Widget;
-using Microsoft.Maui.Essentials;
+using Microsoft.Maui.Storage;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +17,8 @@ namespace MauiNoMauiApp
         public MainPage(Context? context) : base(context)
         {
             this.LayoutParameters = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MatchParent, ViewGroup.LayoutParams.MatchParent);
-            MainButton = new Button(context) { 
+            MainButton = new Button(context)
+            {
                 Text = "MainButton321",
                 LayoutParameters = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WrapContent, ViewGroup.LayoutParams.WrapContent)
             };
@@ -31,7 +32,7 @@ namespace MauiNoMauiApp
 
         private void MainButton_Click(object sender, EventArgs e)
         {
-            Toast.MakeText((sender as View).Context,"Clicked",ToastLength.Short).Show();
+            Toast.MakeText((sender as View).Context, "Clicked", ToastLength.Short).Show();
         }
 
         async Task LoadMauiAsset()

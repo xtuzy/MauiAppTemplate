@@ -1,5 +1,5 @@
 ﻿using CoreGraphics;
-using Microsoft.Maui.Essentials;
+using Microsoft.Maui.Storage;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -15,25 +15,25 @@ namespace MauiNoMauiApp
         public UIView Page;
         public MainPage(CGRect frame)
         {
-            var label = new UILabel(new CGRect(100,100,100,50))
+            var label = new UILabel(new CGRect(100, 100, 100, 50))
             {
-                BackgroundColor = UIColor.SystemPinkColor,
+                BackgroundColor = UIColor.SystemPink,
                 TextAlignment = UITextAlignment.Center,
                 Text = "Hello, iOS!!"
             };
-            
-            var button = new UIButton(new CGRect(100,200,100,50))
+
+            var button = new UIButton(new CGRect(100, 200, 100, 50))
             {
             };
             button.SetTitle("Click", UIControlState.Normal);
-            button.TouchUpInside += (sender, e)=>
+            button.TouchUpInside += (sender, e) =>
             {
                 button.BackgroundColor = UIColor.LightGray;
             };
 
             Page = new UIStackView(frame)
             {
-                BackgroundColor = UIColor.SystemYellowColor,
+                BackgroundColor = UIColor.SystemYellow,
                 Axis = UILayoutConstraintAxis.Vertical
             };
             Page.AddSubview(label);
